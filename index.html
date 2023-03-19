@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" >
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <div TimeClock>TimeClock</div>
+    <script>
+        $(document).ready(function(){
+            setInterval(function(){
+                let now = new Date();
+                let y=now.getFullYear();
+                let m=now.getMonth()+1;
+                let d=now.getDate();
+                let h=now.getHours();
+                let n=now.getMinutes();
+                let s=now.getSeconds();
+                $("[TimeClock]").html(`${y}/${m}/${d} ${h}:${n}:${s}`);
+            },1000);
+        });
+    </script>
+<head>
+  <meta charset="UTF-8">
+  <title>KINMEN</title>
+  <link rel="icon" href="favicon.ico" size="16x16">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+<link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+    <div id="app">
+        <div class="title">
+          <div class="title-inner">
+            <div class="cafe">
+              <div class="cafe-inner">KINMEN</div>
+            </div>
+            <div class="mozart">
+              <div class="mozart-inner">Field Trip</div>
+            </div>
+          </div>
+        </div>
+      
+        <div class="image">
+          <a href="timeline.html"><img src='welcome.jpg' alt=''></a>
+        </div>
+      </div>
+</body>
+</html>
